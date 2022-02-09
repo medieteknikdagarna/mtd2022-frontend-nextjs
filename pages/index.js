@@ -13,6 +13,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapPin, faCalendar, faClock } from '@fortawesome/free-solid-svg-icons'
 import { NextSeo } from 'next-seo'
 
+import CompaniesWithInfoGold, { CompaniesWithInfoSilver } from '../components/CompaniesWithInfo'
+
 const content = require("../public/content/landing.json")
 
 export default function LandingPage() {
@@ -37,8 +39,10 @@ export default function LandingPage() {
                             <div className="welcome">
                                 <p>{content[lang].section1.body[0] }<br/>{ content[lang].section1.body[1]}</p>
                                 <div className="landing-section--buttons">
-                                    <Button href="/massan" type="primary" size="large">{lang === "sv" ? "Om mässan" : "About"}</Button> 
-                                    <Button href="/kontakt" style={{borderColor: "black", color: "var(--color-light)"}} type="secondary" size="large">{lang === "sv" ? "Kontakta oss" : "Contact us"}</Button> 
+                                    <a href="https://massa.medieteknikdagen.se/">
+                                    <Button href="" type="primary" size="large">{lang === "sv" ? "Gå till mässan" : "Go to fair"}</Button> 
+                                    </a>
+                                    <Button href="/jobbportalen" style={{borderColor: "black", color: "var(--color-light)"}} type="secondary" size="large">{lang === "sv" ? "Jobbportalen" : "Job portal"}</Button> 
                                 </div>
                             </div>
                         </div>
@@ -65,6 +69,13 @@ export default function LandingPage() {
                 </section>
             </ResponsiveContainer>
 
+        <ResponsiveContainer className="landing--companies">
+               <CompaniesWithInfoGold/>
+               <CompaniesWithInfoSilver/>
+                <div style={{display: "flex", justifyContent: "center", marginTop: "2rem"}}>
+               <Button href="/foretag" type="secondary" size="large">{lang === "sv" ? "Visa alla företag" : "Show all companies"}</Button> 
+               </div>
+        </ResponsiveContainer>
             {/* <ResponsiveContainer>
                 <section className="booking-section">
                     <div className="stand">

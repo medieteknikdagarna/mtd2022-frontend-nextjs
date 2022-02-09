@@ -15,7 +15,11 @@ export default function Footer(props) {
 
     return (
         <>
-        
+        <div className='footer-wrapper'>
+        <div className='footer--sponsors'>
+            <img src={"images/companies/all/sectra_vit.svg"}/>
+            <img src={"images/companies/all/recordedfuture_vit.svg"}/>
+        </div>
         <div className="footer">
 
             <div className="footer-left">
@@ -51,6 +55,7 @@ export default function Footer(props) {
         </div>
         <div className="footer--bar">
             <code>{content[lang].tag}</code>
+        </div>
         </div>
         </>
     )

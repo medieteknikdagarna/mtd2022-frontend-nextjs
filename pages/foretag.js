@@ -8,8 +8,18 @@ import { importAll } from './massan';
 import { languageContext } from './_app';
 const content = require("../public/content/companies.json")
 import { NextSeo } from 'next-seo'
+import CompaniesWithInfoGold, { CompaniesWithInfoBronze, CompaniesWithInfoSilver, CompaniesWithInfoStandard } from '../components/CompaniesWithInfo';
 export function shuffleArray(array) {
     let currentIndex = array.length,  randomIndex;
+    if(array.length == 2){
+        let temp = Math.round(Math.random());
+        if(temp == 0){
+            return [array[1], array[0]]
+        }
+        else{
+            return array;
+        }
+    }
   
     // While there remain elements to shuffle...
     while (currentIndex != 0) {
@@ -25,16 +35,16 @@ export function shuffleArray(array) {
     return array;
   }
 
-  function CompanyImages (){
+  export function CompanyImagesGold (){
     const [images, setImages] = useState([])
     
 
     useEffect(() => {
-     const images = importAll(require.context('../public/images/previous_companies', false, /\.(svg)$/));
+     const images_import = importAll(require.context('../public/images/companies/gold', false, /\.(svg)$/));
      let imgs = []
-     for(let key in images){
+     for(let key in images_import){
          if(key.includes("svg")){
-            imgs.push(images[key].default)
+            imgs.push(images_import[key].default)
          }
      }
      setImages(shuffleArray(imgs))
@@ -42,12 +52,57 @@ export function shuffleArray(array) {
     }, [])
 
     return (
-        <div className="companies-container">
+        <div className="companies-container--gold">
             {!images && <LoadingSpinner/> || images.map(i => i())}
         </div>
     )
   }
 
+  export function CompanyImagesSilver (){
+    const [images, setImages] = useState([])
+    
+
+    useEffect(() => {
+     const images_import = importAll(require.context('../public/images/companies/silver', false, /\.(svg)$/));
+     let imgs = []
+     for(let key in images_import){
+         if(key.includes("svg")){
+            imgs.push(images_import[key].default)
+         }
+     }
+     setImages(shuffleArray(imgs))
+ 
+    }, [])
+
+    return (
+        <div className="companies-container--silver">
+            {!images && <LoadingSpinner/> || images.map(i => i())}
+        </div>
+    )
+  }
+
+  export function CompanyImagesBronze (){
+    const [images, setImages] = useState([])
+    
+
+    useEffect(() => {
+     const images_import = importAll(require.context('../public/images/companies/bronze', false, /\.(svg)$/));
+     let imgs = []
+     for(let key in images_import){
+         if(key.includes("svg")){
+            imgs.push(images_import[key].default)
+         }
+     }
+     setImages(shuffleArray(imgs))
+ 
+    }, [])
+
+    return (
+        <div className="companies-container--bronze">
+            {!images && <LoadingSpinner/> || images.map(i => i())}
+        </div>
+    )
+  }
 export default function Companies() {
 
     const [lang, setLang] = useContext(languageContext)
@@ -59,9 +114,13 @@ export default function Companies() {
         canonical="https://www.medieteknikdagen.se/foretag"
         />
         <Header changeOnScroll/>
-        <ResponsiveContainer className="rc-companies">
-            <InfoSection tag="" title={content[lang].title} body={content[lang].body}/>
-            <CompanyImages/>
+        <ResponsiveContainer className="foretag--companies">
+               <InfoSection tag="" title={content[lang].title} body={content[lang].body}/>
+               <CompaniesWithInfoGold/>
+               <CompaniesWithInfoSilver/>
+               <CompaniesWithInfoBronze/>
+               <CompaniesWithInfoStandard/>
+
         </ResponsiveContainer>
         <Footer/>    
         </div>

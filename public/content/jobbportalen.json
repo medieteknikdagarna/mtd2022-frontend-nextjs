@@ -1,0 +1,66 @@
+{
+    "sv": {
+      "jobs": [
+          {
+            "company": "RecordedFuture",
+            "type": "master",
+            "information": ["At Recorded Future, we want you to write suggestions on what project you want to work with as a Thesis student. Because we believe that the best projects will be when you get to work with tasks you are passionate about.","Former students have, for example, worked on the following projects.","- Threat-oriented Multi-modal Alignment","- Fake news detection on social media","-Ontology-augmented Information Extraction","Write in your application what you want as a Thesis topic, tell more about yourself, and attach your CV."],
+            "website": "",
+            "email": "recruitment_emea@recordedfuture.com",
+            "tags": ["react", "security", "front-end", "back-end", "platform", "applications", "analytics", "UX", "QA"],
+            "logo_url": "recordedfuture.svg"
+        },
+        {
+            "company": "RecordedFuture",
+            "type": "internship",
+            "information": ["We offer internships to all our departments. Platform, UX, Application, QA, Integration, Analytics and Security. If you are interested in an Internship, please write in which subject and attach your CV to our recruitment email and we will contact you."],
+            "website": "",
+            "email": "recruitment_emea@recordedfuture.com",
+            "tags": ["platform", "UX", "Application", "QA", "Integration", "Analytics", "Security", "front-end", "back-end", "DevOps", "Agile"],
+            "logo_url": "recordedfuture.svg"
+        },
+        {
+            "company": "RecordedFuture",
+            "type": "job",
+            "information": ["Software Engineer, Analytics","Full Stack Engineer","React Native Developer","Integrations Developer"],
+            "website": "https://www.recordedfuture.com/careers/#job-post",
+            "email": "",
+            "tags": ["software engineer", "analytics", "fullstack", "react native", "integrations"],
+            "logo_url": "recordedfuture.svg"
+        },
+        {
+          "company": "Combitech",
+          "type": "job",
+          "information": ["Vi erbjuder flertal olika möjligheter inom IT och Teknik, vi rekryterar kontinuerligt till roller inom exempelvis mjukvaruutveckling, systemutveckling, cyber security, produktutveckling, mekanik och testutveckling."],
+          "website": "https://www.combitech.se/lediga-jobb/",
+          "email": "",
+          "tags": ["software", "hardware", "engineer", "consult", "developer", "konstruktör", "cyber security"],
+          "logo_url": "combitech.svg"
+      },
+      {
+        "company": "Combitech",
+        "type": "internship",
+        "information": ["Combitech Talent Program riktar sig till dig som är ny i yrkeslivet. Programmet är utformat för att snabba på din resa från talang till erfaren konsult - det anpassas dessutom till ditt uppdrag och din kompetensprofil, och innehåller flera delar från vårt koncept för kompetensutveckling Combitech Grow. Steg för steg breddar och fördjupar du ditt kunnande och din erfarenhet, samtidigt som du lär dig att lära av såväl egna som andras erfarenheter."],
+        "website": "https://www.combitech.se/din-karriar/combitech-talent-program/",
+        "email": "",
+        "tags": [],
+        "logo_url": "combitech.svg"
+    },
+    {
+      "company": "King",
+      "type": "internship",
+      "information": ["We look at it this way. If you’ve managed to combine hard work with fun at University, why can’t you do the same after you’ve graduated. Here, at King, you will.", "We create unforgettable games that are loved around the world. We work with all kinds of students, and our opportunities are designed to challenge, inspire and develop you. We are offering paid internships for 6 months throughout Sweden. We work with all kinds of students & recent grads, with opportunities at entry level from undergrad to MBA. All opportunities are designed to challenge, inspire and develop you, no matter when in your studies you join us."],
+      "website": "",
+      "email": "",
+      "tags": ["software developer", "product manager", "Java", "C++"],
+      "logo_url": "king.svg"
+  }
+      ]
+     
+    },
+  
+    "en": {
+       
+    }
+  }
+  

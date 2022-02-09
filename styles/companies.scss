@@ -22,3 +22,75 @@
 .rc-companies{
     padding-top: 10rem;
 }
+
+.foretag--companies{
+    margin-top: 15rem;
+}
+
+.header-company{
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Barlow";
+    text-align: center;
+    margin-top: 15rem;
+    margin-bottom: 3rem;
+
+    span{
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: "Barlow";
+    }
+
+
+
+    .gold{
+        color: #FCCC84;
+    }
+
+    .silver{
+        color: #999999;
+    }
+
+    .bronze{
+        color: #C8692C;
+    }
+}
+
+.companies-container{
+    &--gold{
+        display: flex;
+        gap: 4rem;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        svg{
+            max-width: 30rem;
+        }
+
+        @media screen and (max-width: 500px) {
+            svg{
+                max-width: 22rem;
+            }
+        }
+    }
+
+    &--silver{
+        justify-content: center;
+        display: flex;
+        gap: 3rem;
+        flex-wrap: wrap;
+        svg{
+            max-width: 15rem;
+        }
+    }
+
+    &--bronze{
+        display: flex;
+        gap: 3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        svg{
+            max-width: 10rem;
+        }
+    }
+}

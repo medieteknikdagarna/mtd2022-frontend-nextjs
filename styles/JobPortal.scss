@@ -1,5 +1,4 @@
 .jobportal{
-    height: 35vh;
     margin-top: 15rem;
     &--container{
         display: flex;
@@ -8,5 +7,248 @@
     }
     h2{
         color: black;
+    }
+}
+.jobportal-checkboxes{
+    label{
+        margin-right: 0.2rem;
+        
+    }
+    input{
+        margin-right: 1.5rem;
+    }
+}
+
+.job-advert-container{
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
+    }
+
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.job-advert:hover{
+    transition: all 0.2s;
+    cursor: pointer;
+}
+    
+
+
+.job-advert{
+    transition: all 0.2s;
+    -webkit-box-shadow: 0px 4px 16px -6px #000000; 
+box-shadow: 0px 5px 18px -10px #000000af;
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem 0.5rem 2rem;
+    @media screen and (max-width:500px) {
+        padding: 1.5rem 1rem 0.5rem 1rem;
+    }
+    flex-grow: 1;
+
+
+    span{
+        color: var(--color-primary);
+        font-family: "Barlow";
+        font-weight: 400;
+        
+        
+    }
+
+    p{
+        font-size: 1em;
+        margin-top: 0.75rem;
+    }
+    
+    h4{
+        font-size: 1.5em;
+        margin-top: 0.25rem;
+        font-weight: 500;
+        margin-bottom: 0.25rem;
+    }
+
+    &--middle{
+        display: flex;
+        flex-direction: row;
+        @media screen and (max-width:750px) {
+            flex-direction: column;
+        }
+    }
+    &--information{
+        width: 60%;
+        @media screen and (max-width:750px) {
+            width: unset;
+        }
+    }
+    &--logo{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width:750px) {
+            width: unset;
+            padding: 2rem 0;
+        }
+    }
+    img{
+        max-width: 90%;
+        
+    }
+    &--tag-container{
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+       
+    }
+
+    &--tag{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.5rem;
+        background-color: #FFC9A0;
+        border-radius: 4px;
+        padding: 0.2rem 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+.searchfield-jobportal{
+    .search-field-input{
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+        width: 50%;
+        @media screen and (max-width: 800px) {
+            width: 100%;
+            font-size: 1rem;
+        }
+    }
+
+    input{
+        margin-bottom: 3rem;
+    }
+
+    input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
+  padding: 10px;
+  margin-left: 0.5rem;
+}
+}
+
+.job-advert-link{
+    padding: 1rem 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    svg{
+        font-size: 1.2rem;
+        margin-right: 0.7rem;
+    }
+    a{
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+}
+.no-results{
+    text-align: center;
+}
+
+.modal-container-advert{
+    height: auto;
+    padding-top: 8rem;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.job-advert-modal{
+
+    @media screen and (max-width: 60rem) {
+        max-width: 100%;
+        min-width: 100%;
+    }
+    z-index: 999;
+    transition: all 0.2s;
+    max-width: 50%;
+    min-width: 50rem;
+    -webkit-box-shadow: 0px 4px 16px -6px #000000; 
+box-shadow: 0px 5px 18px -10px #000000af;
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem 0.5rem 2rem;
+    flex-grow: 1;
+    background-color: white;
+
+    a{
+        color: rgb(78, 163, 219);
+        cursor: pointer;
+        margin-top: 3rem;
+    }
+
+
+    span{
+        color: var(--color-primary);
+        font-family: "Barlow";
+        font-weight: 400;
+    }
+
+    p{
+        font-size: 1em;
+        margin-top: 0.75rem;
+    }
+    
+    h4{
+        font-size: 1.5em;
+        margin-top: 0.25rem;
+        font-weight: 500;
+    }
+
+    &--middle{
+        display: flex;
+        flex-direction: row;
+    }
+    &--information{
+        width: 60%;
+    }
+    &--logo{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: ceneter;
+    }
+    img{
+        max-width: 90%;
+        
+    }
+    &--tag-container{
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+       
+    }
+
+    &--tag{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.5rem;
+        background-color: #FFC9A0;
+        border-radius: 4px;
+        padding: 0.2rem 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
     }
 }
