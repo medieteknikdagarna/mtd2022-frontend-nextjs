@@ -28,8 +28,8 @@ export function CompanyInformationCard({company, showText=true, clickable=true})
                 <span className={"company-information-card--"+company.partner}>{company.partner.toUpperCase()}</span>
                 <div className='company-information-card--information'>
                 {showText &&
-                    company.information.map(line =>{
-                        return <p>{line}</p>
+                    company.information.map((line,i) =>{
+                        return <p key={i.toString()}>{line}</p>
                     })
                 }
 

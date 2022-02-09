@@ -11,7 +11,7 @@ function JobTag({text}){
         <div className="job-advert--tag">{text}</div>
     )
 }
-
+ 
 
 
 export default function JobAdvert({data}) {
@@ -71,8 +71,8 @@ export default function JobAdvert({data}) {
         <span>{getTitle(data.type)}</span>
         <div className='job-advert--middle'>
             <div className='job-advert--information'>
-                {data.information.map((line) =>{
-                    return <p>{line}</p>
+                {data.information.map((line,i) =>{
+                    return <p key={i.toString()}>{line}</p>
                 })}
                
             </div>
@@ -98,8 +98,8 @@ export default function JobAdvert({data}) {
         </div>
         
         <div className='job-advert--tag-container'>
-            {data.tags.map((tag ) =>{
-            return <JobTag text={tag}/>
+            {data.tags.map((tag,i ) =>{
+            return <JobTag key={tag + i} text={tag}/>
    })}
    </div>
    <Button onClick={() => setOpenModal(false)}>Close</Button>
@@ -114,8 +114,8 @@ export default function JobAdvert({data}) {
     <span>{getTitle(data.type)}</span>
     <div className='job-advert--middle'>
         <div className='job-advert--information'>
-            {info.map((line) =>{
-                return <p>{line}</p>
+            {info.map((line,i) =>{
+                return <p key={i.toString()}>{line}</p>
             })}
         </div>
         <div className='job-advert--logo'>
@@ -123,8 +123,8 @@ export default function JobAdvert({data}) {
         </div>
     </div>
     <div className='job-advert--tag-container'>
-        {data.tags.map((tag ) =>{
-        return <JobTag text={tag}/>
+        {data.tags.map((tag,i ) =>{
+        return <JobTag key={tag+i} text={tag}/>
     })}
     </div>
   </div>
