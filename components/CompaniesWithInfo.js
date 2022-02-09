@@ -60,7 +60,7 @@ export default function CompaniesWithInfoGold() {
   <div className='landing-companies-gold'>
   {companies &&
     companies.map((company) =>{
-       return <CompanyInformationCard company={company}/>
+       return <CompanyInformationCard key={company.company} company={company}/>
     })
   }
     
@@ -129,7 +129,7 @@ export function CompaniesWithInfoSilver() {
     <div className='landing-companies-standard'>
     {companies &&
       companies.map((company) =>{
-         return <CompanyInformationCard showText={false} company={company}/>
+         return <CompanyInformationCard key={company.company} showText={false} company={company}/>
       })
     }
       
