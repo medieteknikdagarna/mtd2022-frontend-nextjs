@@ -91,7 +91,7 @@ export default function JobAdvert({data}) {
                     data.website.map((url,i) =>{
                         return(<div key={i}>
                             <FontAwesomeIcon icon={faGlobe} />
-                            <a href={url}>Hemsida</a>
+                            <a rel="noreferrer" target="_blank" href={url}>Hemsida</a>
                         </div>)
                     })
             }
