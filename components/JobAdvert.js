@@ -35,7 +35,7 @@ export default function JobAdvert({data}) {
 
   const MAX_CHAR_LENGTH = 250
 
-  const [info,setInfo] = useState(data.information)
+  const [info,setInfo] = useState()
 
   useEffect(()=>{
     let newInfo = [];
@@ -58,7 +58,7 @@ export default function JobAdvert({data}) {
     setInfo(newInfo)
    
 
-  },[])
+  },[data])
     
   return (
       <>
@@ -114,7 +114,7 @@ export default function JobAdvert({data}) {
     <span>{getTitle(data.type)}</span>
     <div className='job-advert--middle'>
         <div className='job-advert--information'>
-            {info.map((line,i) =>{
+            {info && info.map((line,i) =>{
                 return <p key={i.toString()}>{line}</p>
             })}
         </div>

@@ -38,10 +38,7 @@
     .background-image{
         &-gold{
             background-image: url("/images/gold_background.png");
-            img{
-                max-width: 80%;
-                max-height: 70%;
-            }
+
 
         }
         &-silver{
@@ -88,10 +85,12 @@
     }
 
     &--left{
+        height: auto;
         padding: 2.5rem;
         @media screen and (max-width: 500px) {
             padding: 1.5rem;
         }
+        
     }
     &--right{
         height: 50%;

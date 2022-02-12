@@ -32,6 +32,13 @@
             "logo": "gaia.svg"
         },
         {
+            "company": "Voyado",
+            "partner": "silver",
+            "information": ["We've been challenging the dragons in the customer loyalty, CRM and marketing automation area since 2005. One thing we know for sure, Voyado wouldn’t be the powerful platform it is without the people behind it! We focus on building the best customer loyalty platform for retailers and ecom who want to give their customers an outstanding experience. We have succeeded but won’t stop now…we are definitely going places!"],
+            "logo": "voyado.png"
+        },
+        
+        {
             "company": "Saab",
             "partner": "silver",
             "information": ["Saab serves the global market with world-leading products, services and solutions from military defence to civil security. With operations on every continent, Saab continuously develops, adapts and improves new technology to meet customers’ changing needs."],
@@ -96,7 +103,7 @@
             "company": "TaxiCaller Nordic",
             "partner": "standard",
             "information": ["Since 2011, TaxiCaller has provided indispensable dispatching software to hundreds of taxi, limo, private hire and car service companies. We've become the specialist in cloud-based dispatching, with a global presence in all continents. With our software, our cusomters can provide multiple booking channels for their passengers so they can keep up with the constantly changing world of transport.","TaxiCaller provides a complete end-to-end software with all the tools needed to thrive. We're always on the look-out for talent within different areas.", "We're looking forward to seeing you at MTD!"],
-            "logo": "taxicaller.svg"
+            "logo": "taxicaller.png"
         },
         {
             "company": "Voysys",

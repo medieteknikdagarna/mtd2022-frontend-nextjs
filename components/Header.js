@@ -38,6 +38,7 @@ export default function Header({shadow =false, changeOnScroll = false, lightCont
         
     }
 
+
     
 
     return (
@@ -55,8 +56,14 @@ export default function Header({shadow =false, changeOnScroll = false, lightCont
                     <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/medieteknikdagarna-2014/" className="icon-link"><FontAwesomeIcon className="brand-icons" icon={faLinkedin}/></a>
                     <a target="_blank" rel="noreferrer" href="https://www.youtube.com/c/Medieteknikdagen" className="icon-link"><FontAwesomeIcon className="brand-icons" icon={faYoutube}/></a>
                 </div>
+                
             </div>
+           
         </div> 
+        <div className='header--sponsors'>
+            <img src={"images/companies/all/sectra_vit.svg"}/>
+            <img src={"images/companies/all/recordedfuture_vit.svg"}/>
+        </div>
         <div className="menu-icon">
                 <i className="menu-icon--icon" onClick={() => setMenuActive(true)}><MenuIcon/></i>
         </div> 

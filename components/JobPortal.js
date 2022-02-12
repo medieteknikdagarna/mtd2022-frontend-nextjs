@@ -8,85 +8,86 @@ import Link from 'next/link'
 import ReservationSuccess from './ReservationSuccess'
 import { languageContext } from '../pages/_app'
 import JobAdvert from './JobAdvert'
-const jobs_data_shuffled = shuffleArray(require("../public/content/jobbportalen.json").sv.jobs)
+let jobs_data_shuffled = shuffleArray(require("../public/content/jobbportalen.json").sv.jobs)
 import { shuffleArray } from '../pages/foretag'
 export default function JobPortal() {
 
-    const [jobs, setJobs] = useState(null)
-
-    const [checkboxes, setCheckboxes] = useState({"showAll": true, "job": false, "master": false, "summerjob": false, "internship": false, "trainee": false})
+    const [jobs, setJobs] = useState([])
+    const [searchString, setSearchString] = useState("")
+    const [checkboxes, setCheckboxes] = useState([])
 
     const searchRef = useRef(null)
     useEffect(() => {
-        filterWithCriteria()
-    }, [checkboxes]);
+        var filteredData = filterByKeyword(jobs_data_shuffled,searchString);
+        filteredData = filterByCheckboxes(filteredData);
+        setJobs(filteredData);
+    }, [checkboxes,searchString]);
 
     
-    const filterJobsOnSearch = (keyword) =>{
+    const filterByKeyword = (data,keyword) =>{
         keyword = keyword.trim().toLowerCase();
-        let temp = jobs_data_shuffled.filter((job) =>{
-            if(job.tags.filter((tag) => tag.toLocaleLowerCase().includes(keyword)).length != 0){
+        let temp = data.filter((job) =>{
+            if(job.tags.filter((tag) => tag.toLowerCase().includes(keyword)).length != 0){
                 return true;
             }
-            if(job.company.toLocaleLowerCase().includes(keyword)){
+            if(job.company.toLowerCase().includes(keyword)){
                 return true;
             }
-            
-        
+            return false;
         })
-       
-
        return temp;
-    } 
+    }
 
-
-    const handleSearch = (event) =>{
-       let filtered_jobs = filterJobsOnSearch(event.target.value)
-       filterWithCriteria(filtered_jobs)
-    } 
-
-    const filterWithCriteria = (data = jobs_data_shuffled) =>{
-        if(searchRef.current.value != ""){
-            data = filterJobsOnSearch(searchRef.current.value)
-        }
-        if(!checkboxes["showAll"]){
+    const filterByCheckboxes = (data) =>{
+        if(checkboxes.length !== 0){
             data = data.filter((job) =>{
-                return checkboxes[job.type]
+                return checkboxes.includes(job.type)
             })
         }
-        setJobs(data)
+        console.log(data)
+        return data;
+    }
+
+    const handleCheckboxChange = (event) =>{
+        console.log(event.target.value)
+        setCheckboxes(oldArray => {
+            if (oldArray.includes(event.target.value)){
+                return oldArray.filter( word => word !== event.target.value)
+            }
+            else{
+                return [...oldArray, event.target.value]
+            }
+            
+        });
+        
     }
 
     const handleShowAll = () =>{
-        setCheckboxes(prevState => {
-            if( prevState.showAll){
-                return prevState
-            }
-           return ({"showAll": true, "job": false, "master": false, "summerjob": false, "internship": false, "trainee": false})
-    })
+       setCheckboxes([])
     }
     
 
     return(
+        
     <ResponsiveContainer className="jobportal">
             <div className='searchfield-jobportal'>
-                <input className='search-field-input' ref={searchRef} onChange={handleSearch} placeholder='Sök efter nyckelord eller företag'/>
+                <input className='search-field-input' ref={searchRef} onChange={(e) => setSearchString(e.target.value)} placeholder='Sök efter nyckelord eller företag'/>
                 <div className='jobportal-checkboxes'>
-                    <form onChange={() => filterWithCriteria()}>
+                    <form>
                     <label>Visa alla</label>
-                    <input type="checkbox" name="Visa alla" value="1" checked={checkboxes["showAll"]} onChange={() => handleShowAll()}></input>
+                    <input type="checkbox" name="Visa alla" value="showAll" checked={checkboxes.length === 0} onChange={handleShowAll}></input>
                     <label>Anställning</label>
-                    <input type="checkbox" name="Anställning" value="0" checked={checkboxes.job} onChange={() => setCheckboxes(prevState => ({...prevState,["job"]: !prevState.job, ["showAll"]: false}))}>
+                    <input type="checkbox" name="Anställning" value="job" checked={checkboxes.includes("job")} onChange={(e) => handleCheckboxChange(e)}>
 
                     </input>
                     <label>Exjobb</label>
-                    <input type="checkbox" name="Exjobb" value="0" checked={checkboxes.master} onChange={() => setCheckboxes(prevState => ({...prevState,["master"]: !prevState.master, ["showAll"]: false}))}></input>
+                    <input type="checkbox" name="Exjobb" value="master" checked={checkboxes.includes("master")} onChange={(e) => handleCheckboxChange(e)}></input>
                     <label>Sommarjobb</label>
-                    <input type="checkbox" name="Sommarjobb" value="0" checked={checkboxes.summerjob} onChange={() => setCheckboxes(prevState => ({...prevState,["summerjob"]: !prevState.summerjob, ["showAll"]: false}))}></input>
+                    <input type="checkbox" name="Sommarjobb" value="summberjob" checked={checkboxes.includes("summberjob")} onChange={(e) => handleCheckboxChange(e)}></input>
                     <label>Praktik</label>
-                    <input type="checkbox" name="Praktik" checked={checkboxes.internship} value="0" onChange={() => setCheckboxes(prevState => ({...prevState,["internship"]: !prevState.internship, ["showAll"]: false}))}></input>
+                    <input type="checkbox" name="Praktik" checked={checkboxes.includes("internship")} value="internship" onChange={(e) => handleCheckboxChange(e)}></input>
                     <label>Trainee</label>
-                    <input type="checkbox" name="Trainee" value="0" checked={checkboxes.trainee} onChange={() => setCheckboxes(prevState => ({...prevState,["trainee"]: !prevState.trainee, ["showAll"]: false}))}></input>
+                    <input type="checkbox" name="Trainee" value="trainee" checked={checkboxes.includes("trainee")} onChange={(e) => handleCheckboxChange(e)}></input>
                     </form>
                 </div>
             </div>
@@ -95,7 +96,7 @@ export default function JobPortal() {
                 {jobs &&
                     jobs.map((job,i) =>{
                     
-                        return <JobAdvert key={"job-advert" + i} data={job}/>
+                        return <JobAdvert key={i} data={job}/>
                     })
                 }
                 {jobs && jobs.length == 0 &&

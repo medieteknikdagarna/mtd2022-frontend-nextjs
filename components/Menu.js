@@ -71,6 +71,11 @@ export default function Menu({onExit,style,className, show}) {
                 <a href="https://www.youtube.com/c/Medieteknikdagen" target="_blank" rel="noreferrer" className="icon-link"><FontAwesomeIcon className="brand-icons" icon={faYoutube}/></a>
                 </div>
             </div>
+            <div className='menu--sponsors'>
+                <img src={"images/companies/all/sectra_vit.svg"}/>
+                <img src={"images/companies/all/recordedfuture_vit.svg"}/>
+            </div>
+            
         </animated.div>
         </>
             

@@ -36,7 +36,7 @@
           "email": "",
           "tags": ["software", "hardware", "engineer", "consult", "developer", "konstruktör", "cyber security"],
           "logo_url": "combitech.svg"
-      },
+        },
       {
         "company": "Combitech",
         "type": "internship",
@@ -45,16 +45,98 @@
         "email": "",
         "tags": [],
         "logo_url": "combitech.svg"
+        },
+      {
+        "company": "King",
+        "type": "internship",
+        "information": ["We look at it this way. If you’ve managed to combine hard work with fun at University, why can’t you do the same after you’ve graduated. Here, at King, you will.", "We create unforgettable games that are loved around the world. We work with all kinds of students, and our opportunities are designed to challenge, inspire and develop you. We are offering paid internships for 6 months throughout Sweden. We work with all kinds of students & recent grads, with opportunities at entry level from undergrad to MBA. All opportunities are designed to challenge, inspire and develop you, no matter when in your studies you join us."],
+        "website": "",
+        "email": "",
+        "tags": ["software developer", "product manager", "Java", "C++"],
+        "logo_url": "king.svg"
+      },
+
+    {
+      "company": "XMReality",
+      "type": "master",
+      "information": ["Exjobb hösten 2022"],
+      "website": "https://jobs.cruitive.com/job/ckzcjl6nf391210es64s3rn600",
+      "email": "",
+      "tags": ["software development", "image recognition", "algorithms", "UX", "UI","design", "prototype development", "test automation", "end-to-end testing", "test-driven development", "augmented reality", "ARKit/ARCore", "WebAR", "Microsoft Mixed Reality", "Frontend software development", "mobile app development"],
+      "logo_url": "xmreality.svg"
     },
     {
-      "company": "King",
-      "type": "internship",
-      "information": ["We look at it this way. If you’ve managed to combine hard work with fun at University, why can’t you do the same after you’ve graduated. Here, at King, you will.", "We create unforgettable games that are loved around the world. We work with all kinds of students, and our opportunities are designed to challenge, inspire and develop you. We are offering paid internships for 6 months throughout Sweden. We work with all kinds of students & recent grads, with opportunities at entry level from undergrad to MBA. All opportunities are designed to challenge, inspire and develop you, no matter when in your studies you join us."],
-      "website": "",
+      "company": "XMReality",
+      "type": "job",
+      "information": ["Frontend Developer"],
+      "website": "https://jobs.cruitive.com/job/ckt8bdzl0qc8h078368fm5mq7",
       "email": "",
-      "tags": ["software developer", "product manager", "Java", "C++"],
-      "logo_url": "king.svg"
-  }
+      "tags": ["front end", "electron", "react", "redux", "MaterialUI", "WebRTC", "C#", ".NET"],
+      "logo_url": "xmreality.svg"
+    },
+    {
+      "company": "XMReality",
+      "type": "job",
+      "information": ["Backend Developer"],
+      "website": "https://jobs.cruitive.com/job/ckt8bd20dqc0b0783q0hh7e8k",
+      "email": "",
+      "tags": ["back end", ".Net 5.0 (.Net Core)", "Entity Framework Core", "Redis", "Docker", "Kubernetes"],
+      "logo_url": "xmreality.svg"
+    },
+    {
+      "company": "Sveriges Radio",
+      "type": "master",
+      "information": ["Aldrig tidigare har ljudet som medieform varit så het. Antalet poddar på ljudmarknaden blir allt fler och Sveriges Radio, som ett starkt public service-bolag med ljudet i fokus, befinner sig mitt i detta. Vi har länge legat långt fram inom teknisk utveckling av ljud och digitalt tillgängliggörande av vårt innehåll. Nu satsar vi på att bli ännu bättre genom att expandera inom egenutveckling med publiken, användaren och den senaste tekniken i fokus.","Tidigare exjobbare har kollat in på exempelvis tekniska lösningar för att förbättra hörbarheten på SRs ljud när man har hörselnedsättning eller befinner sig i miljöer med störljud. En annan har gjort tester på tal-till-text på svenska innan Google m.fl. släppte stöd för detta. En tredje nyttjade maskininlärning/AI för att analysera och kategorisera innehållet i våra ljud.","Hos oss finns massa olika möjligheter, skriv vad du är intresserad av så kollar vi in på möjligheterna för att skriva hos oss!"],
+      "website": "https://karriar.sverigesradio.se/",
+      "email": "",
+      "tags": ["fullstack", "android", "ljsuteknik", "utveckling", "hårdvara", "mjukvara"],
+      "logo_url": "sveriges_radio.svg"
+    },
+    {
+      "company": "Sveriges Radio",
+      "type": "internship",
+      "information": ["Aldrig tidigare har ljudet som medieform varit så het. Antalet poddar på ljudmarknaden blir allt fler och Sveriges Radio, som ett starkt public service-bolag med ljudet i fokus, befinner sig mitt i detta. Vi har länge legat långt fram inom teknisk utveckling av ljud och digitalt tillgängliggörande av vårt innehåll. Nu satsar vi på att bli ännu bättre genom att expandera inom egenutveckling med publiken, användaren och den senaste tekniken i fokus.","Tidigare exjobbare har kollat in på exempelvis tekniska lösningar för att förbättra hörbarheten på SRs ljud när man har hörselnedsättning eller befinner sig i miljöer med störljud. En annan har gjort tester på tal-till-text på svenska innan Google m.fl. släppte stöd för detta. En tredje nyttjade maskininlärning/AI för att analysera och kategorisera innehållet i våra ljud.","Hos oss finns massa olika möjligheter, skriv vad du är intresserad av så kollar vi in på möjligheterna för att skriva hos oss!"],
+      "website": "https://karriar.sverigesradio.se/",
+      "email": "",
+      "tags": ["fullstack", "android", "ljsuteknik", "utveckling", "hårdvara", "mjukvara"],
+      "logo_url": "sveriges_radio.svg"
+    },
+    {
+      "company": "Sveriges Radio",
+      "type": "job",
+      "information": ["Aldrig tidigare har ljudet som medieform varit så het. Antalet poddar på ljudmarknaden blir allt fler och Sveriges Radio, som ett starkt public service-bolag med ljudet i fokus, befinner sig mitt i detta. Vi har länge legat långt fram inom teknisk utveckling av ljud och digitalt tillgängliggörande av vårt innehåll. Nu satsar vi på att bli ännu bättre genom att expandera inom egenutveckling med publiken, användaren och den senaste tekniken i fokus.","Tidigare exjobbare har kollat in på exempelvis tekniska lösningar för att förbättra hörbarheten på SRs ljud när man har hörselnedsättning eller befinner sig i miljöer med störljud. En annan har gjort tester på tal-till-text på svenska innan Google m.fl. släppte stöd för detta. En tredje nyttjade maskininlärning/AI för att analysera och kategorisera innehållet i våra ljud.","Hos oss finns massa olika möjligheter, skriv vad du är intresserad av så kollar vi in på möjligheterna för att skriva hos oss!"],
+      "website": "https://karriar.sverigesradio.se/",
+      "email": "",
+      "tags": ["fullstack", "android", "ljsuteknik", "utveckling", "hårdvara", "mjukvara"],
+      "logo_url": "sveriges_radio.svg"
+    },
+    {
+      "company": "Xamera",
+      "type": "job",
+      "information": ["A lot of different positions from embedded systems to the most front end oriented ones regarding UI/UX, web and applications. Book a Carrertalk with us and we will be in touch regarding all of the option we offer!"],
+      "website": "https://xamera.teamtailor.com/jobs/216322-kom-in-pa-ett-karriarsamtal-sa-diskuterar-vi-dina-mojligheter",
+      "email": "",
+      "tags": ["C", "C++", "C#", "Java", "Python", "Javascript", "React", "Embedded", "Frontend", "Backend", "Fullstack", "Webb"],
+      "logo_url": "xamera.svg"
+    },
+    {
+      "company": "Voyado",
+      "type": "job",
+      "information": ["Software Developer"],
+      "website": "https://careers.voyado.com/jobs/1589258-systemutvecklare/14ef4f77-c421-40bf-90c7-fc3da887a729",
+      "email": "",
+      "tags": [".NET", "C#", "JavaScript", "TypeScript", "Aurelia", "SQL", "Fullstack"],
+      "logo_url": "voyado.png"
+    },
+    {
+      "company": "Voyado",
+      "type": "job",
+      "information": ["Implementation Specialist"],
+      "website": "https://careers.voyado.com/jobs/1201619-implementation-specialist",
+      "email": "",
+      "tags": ["implementation", "integrations", "setup", "configuration", "training"],
+      "logo_url": "voyado.png"
+    }
       ]
      
     },

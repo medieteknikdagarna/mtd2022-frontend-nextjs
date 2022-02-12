@@ -40,9 +40,15 @@
 
 
 .job-advert{
+
+    &:hover{
+        background-color: rgb(243, 243, 243);
+    }
+
+
     transition: all 0.2s;
-    -webkit-box-shadow: 0px 4px 16px -6px #000000; 
-box-shadow: 0px 5px 18px -10px #000000af;
+    -webkit-box-shadow: 0px 5px 18px -14px #000000; 
+    box-shadow: 0px 5px 18px -14px #000000af;
     margin-bottom: 2rem;
     padding: 1.5rem 2rem 0.5rem 2rem;
     @media screen and (max-width:500px) {
@@ -185,8 +191,8 @@ box-shadow: 0px 5px 18px -10px #000000af;
     transition: all 0.2s;
     max-width: 50%;
     min-width: 50rem;
-    -webkit-box-shadow: 0px 4px 16px -6px #000000; 
-box-shadow: 0px 5px 18px -10px #000000af;
+    -webkit-box-shadow: 0px 5px 18px -14px #000000; 
+box-shadow: 0px 5px 18px -14px #000000af;
     margin-bottom: 2rem;
     padding: 1.5rem 2rem 0.5rem 2rem;
     flex-grow: 1;

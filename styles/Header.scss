@@ -211,5 +211,22 @@
   }
 }
 
-
+.header--sponsors{
+  @media screen and (max-width: 1600px) {
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 2rem;
+  }
+  @media screen and (max-width: 1300px) {
+    display: none;
+  }
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 7.5vw;
+  img{
+    max-height: 2rem;
+  }
+}
 

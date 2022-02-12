@@ -34,6 +34,20 @@
   }
 }
 
+.menu--sponsors{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @media screen and (max-width: 500px) {
+    img{
+      max-height: 30%;
+    }
+  }
+  img{
+    max-height: 15%;
+  }
+  margin-top: 5rem;
+}
 
 .close-icon i {
   grid-column: -1/-2;
