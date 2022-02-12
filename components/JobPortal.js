@@ -83,7 +83,7 @@ export default function JobPortal() {
                     <label>Exjobb</label>
                     <input type="checkbox" name="Exjobb" value="master" checked={checkboxes.includes("master")} onChange={(e) => handleCheckboxChange(e)}></input>
                     <label>Sommarjobb</label>
-                    <input type="checkbox" name="Sommarjobb" value="summberjob" checked={checkboxes.includes("summberjob")} onChange={(e) => handleCheckboxChange(e)}></input>
+                    <input type="checkbox" name="Sommarjobb" value="summerjob" checked={checkboxes.includes("summerjob")} onChange={(e) => handleCheckboxChange(e)}></input>
                     <label>Praktik</label>
                     <input type="checkbox" name="Praktik" checked={checkboxes.includes("internship")} value="internship" onChange={(e) => handleCheckboxChange(e)}></input>
                     <label>Trainee</label>

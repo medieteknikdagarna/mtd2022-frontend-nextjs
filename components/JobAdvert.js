@@ -31,6 +31,9 @@ export default function JobAdvert({data}) {
       else if(type == "summerjob"){
           return "SOMMARJOBB"
       }
+      else if(type == "trainee"){
+        return "TRAINEE"
+    }
   }
 
   const MAX_CHAR_LENGTH = 250
