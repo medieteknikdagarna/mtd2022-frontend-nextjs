@@ -83,12 +83,16 @@ export default function JobAdvert({data}) {
             </div>
         </div>
         <div className='job-advert-link'>
-            {data.website != "" &&
-                <div>
-                <FontAwesomeIcon icon={faGlobe} />
-                <a href={data.website}>Hemsida</a>
-                </div>
+        <div>
+            {
+                    data.website.map((url,i) =>{
+                        return(<div key={i}>
+                            <FontAwesomeIcon icon={faGlobe} />
+                            <a href={url}>Hemsida</a>
+                        </div>)
+                    })
             }
+            </div>
             {data.email != "" &&
                 <div>
                 <FontAwesomeIcon icon={faEnvelope} />

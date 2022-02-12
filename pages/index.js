@@ -12,7 +12,7 @@ import ResponsiveContainer from '../components/ResponsiveContainer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapPin, faCalendar, faClock } from '@fortawesome/free-solid-svg-icons'
 import { NextSeo } from 'next-seo'
-
+const n_jobs = require("../public/content/jobbportalen.json").sv.jobs.length
 import CompaniesWithInfoGold, { CompaniesWithInfoSilver } from '../components/CompaniesWithInfo'
 
 const content = require("../public/content/landing.json")
@@ -42,7 +42,10 @@ export default function LandingPage() {
                                     <a href="https://massa.medieteknikdagen.se/">
                                     <Button href="" type="primary" size="large">{lang === "sv" ? "Gå till mässan" : "Go to fair"}</Button> 
                                     </a>
-                                    <Button href="/jobbportalen" style={{borderColor: "black", color: "var(--color-light)"}} type="secondary" size="large">{lang === "sv" ? "Jobbportalen" : "Job portal"}</Button> 
+                                    <div className='job-button-wrapper'>
+                                        <div className='number-of-new-jobs'>{n_jobs}</div>
+                                     <Button href="/jobbportalen" style={{borderColor: "black", color: "var(--color-light)"}} type="secondary" size="large">{lang === "sv" ? "Jobbportalen" : "Job portal"}</Button> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
