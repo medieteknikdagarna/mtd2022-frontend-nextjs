@@ -2,7 +2,7 @@ import React, { useEffect,useState, useContext } from 'react';
 import Backdrop from './Backdrop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {} from "@fortawesome/fontawesome-svg-core"
-import { faArrowAltCircleUp, faEnvelope, faGlobe, faX } from '@fortawesome/free-solid-svg-icons'
+import { faArrowAltCircleUp, faArrowUpRightFromSquare, faEnvelope, faGlobe, faX } from '@fortawesome/free-solid-svg-icons'
 import {fa} from "@fortawesome/fontawesome-svg-core"
 import Button from './Button';
 import { languageContext } from '../pages/_app'
@@ -93,7 +93,7 @@ export default function JobAdvert({data}) {
             {
                     data.website.map((url,i) =>{
                         return(<div key={i}>
-                            <FontAwesomeIcon icon={faGlobe} />
+                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                             <a rel="noreferrer" target="_blank" href={url}>{lang == "sv" ? "Hemsida" : "Website"}</a>
                         </div>)
                     })
