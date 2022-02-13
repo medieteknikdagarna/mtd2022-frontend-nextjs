@@ -8,7 +8,6 @@ const content = require("../public/content/cookies.json")
 export default function AcceptPolicy() {
 
     const [lang, setLang] = useContext(languageContext)
-
     const [hasAccepted, setAccepted] = useState(true)
     const transitions = useTransition(!hasAccepted, {
         from: { y: 200, transform: "translateX(-50%)" },

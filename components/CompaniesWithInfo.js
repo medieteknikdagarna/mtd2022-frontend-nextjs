@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { shuffleArray } from '../pages/foretag';
 const content = require("../public/content/company_information.json")
 import CompanyModal from './CompanyModal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { languageContext } from '../pages/_app'
 import { faX } from '@fortawesome/free-solid-svg-icons'
 
 export function CompanyInformationCard({company, showText=true, clickable=true}){
-
+    const [lang, setLang] = useContext(languageContext)
     const [isOpen, setOpen] = useState(false);
     const handleOpenModal = () =>{
         if(clickable){
@@ -36,7 +36,7 @@ export function CompanyInformationCard({company, showText=true, clickable=true})
                 }
 
                 {!showText &&
-                    <span>Läs mer</span>
+                    <span>{lang == "sv" ? "Läs mer" : "Read more"}</span>
                 }
                 </div>
             </div>

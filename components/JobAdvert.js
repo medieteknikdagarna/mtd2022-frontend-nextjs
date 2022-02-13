@@ -1,10 +1,11 @@
-import React, { useEffect,useState } from 'react';
+import React, { useEffect,useState, useContext } from 'react';
 import Backdrop from './Backdrop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {} from "@fortawesome/fontawesome-svg-core"
 import { faArrowAltCircleUp, faEnvelope, faGlobe, faX } from '@fortawesome/free-solid-svg-icons'
 import {fa} from "@fortawesome/fontawesome-svg-core"
 import Button from './Button';
+import { languageContext } from '../pages/_app'
 
 function JobTag({text}){
     return (
@@ -17,19 +18,21 @@ function JobTag({text}){
 export default function JobAdvert({data}) {
 
   const [openModal, setOpenModal] = useState(false)
+  const [lang, setLang] = useContext(languageContext)
+  
 
   const getTitle = (type) =>{
       if(type == "job"){
-          return "ANSTÄLLNING"
+          return  lang == "sv" ? "ANSTÄLLNING" : "EMPLOYMENT"
       }
       else if (type == "master"){
-          return "EXJOBB"
+          return lang == "sv" ? "EXJOBB" : "MASTER THESIS"
       }
       else if (type == "internship"){
-          return "PRAKTIK"
+          return lang == "sv" ? "PRAKTIK" : "INTERNSHIP"
       }
       else if(type == "summerjob"){
-          return "SOMMARJOBB"
+          return lang == "sv" ? "SOMMARJOBB" : "SUMMER INTERNSHIP"
       }
       else if(type == "trainee"){
         return "TRAINEE"
@@ -91,7 +94,7 @@ export default function JobAdvert({data}) {
                     data.website.map((url,i) =>{
                         return(<div key={i}>
                             <FontAwesomeIcon icon={faGlobe} />
-                            <a rel="noreferrer" target="_blank" href={url}>Hemsida</a>
+                            <a rel="noreferrer" target="_blank" href={url}>{lang == "sv" ? "Hemsida" : "Website"}</a>
                         </div>)
                     })
             }

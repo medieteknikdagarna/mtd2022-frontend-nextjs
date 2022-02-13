@@ -16,6 +16,8 @@ export default function JobPortal() {
     const [searchString, setSearchString] = useState("")
     const [checkboxes, setCheckboxes] = useState([])
 
+    const [lang, setLang] = useContext(languageContext)
+
     const searchRef = useRef(null)
     useEffect(() => {
         var filteredData = filterByKeyword(jobs_data_shuffled,searchString);
@@ -72,17 +74,16 @@ export default function JobPortal() {
                 <input className='search-field-input' ref={searchRef} onChange={(e) => setSearchString(e.target.value)} placeholder='Sök efter nyckelord eller företag'/>
                 <div className='jobportal-checkboxes'>
                     <form>
-                    <label>Visa alla</label>
+                    <label>{lang == "sv" ? "Visa alla" : "Show all"}</label>
                     <input type="checkbox" name="Visa alla" value="showAll" checked={checkboxes.length === 0} onChange={handleShowAll}></input>
-                    <label>Anställning</label>
+                    <label>{lang == "sv" ? "Anställning" : "Employment"}</label>
                     <input type="checkbox" name="Anställning" value="job" checked={checkboxes.includes("job")} onChange={(e) => handleCheckboxChange(e)}>
-
                     </input>
-                    <label>Exjobb</label>
+                    <label>{lang == "sv" ? "Exjobb" : "Master thesis"}</label>
                     <input type="checkbox" name="Exjobb" value="master" checked={checkboxes.includes("master")} onChange={(e) => handleCheckboxChange(e)}></input>
-                    <label>Sommarjobb</label>
-                    <input type="checkbox" name="Sommarjobb" value="summerjob" checked={checkboxes.includes("summerjob")} onChange={(e) => handleCheckboxChange(e)}></input>
-                    <label>Praktik</label>
+                    <label>{lang == "sv" ? "Sommarjobb" : "Summer internship"}</label>
+                    <input type="checkbox" name="Sommarjob" value="summerjob" checked={checkboxes.includes("summerjob")} onChange={(e) => handleCheckboxChange(e)}></input>
+                    <label>{lang == "sv" ? "Praktik" : "Internship"}</label>
                     <input type="checkbox" name="Praktik" checked={checkboxes.includes("internship")} value="internship" onChange={(e) => handleCheckboxChange(e)}></input>
                     <label>Trainee</label>
                     <input type="checkbox" name="Trainee" value="trainee" checked={checkboxes.includes("trainee")} onChange={(e) => handleCheckboxChange(e)}></input>

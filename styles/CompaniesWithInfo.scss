@@ -19,6 +19,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .company-information-card{
+        @media screen and (max-width: 950px) {
+            max-width: 90%;
+    
+        }
+    }
+
 }
 
 .company-information-card{
