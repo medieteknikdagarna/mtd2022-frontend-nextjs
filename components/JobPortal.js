@@ -44,12 +44,10 @@ export default function JobPortal() {
                 return checkboxes.includes(job.type)
             })
         }
-        console.log(data)
         return data;
     }
 
     const handleCheckboxChange = (event) =>{
-        console.log(event.target.value)
         setCheckboxes(oldArray => {
             if (oldArray.includes(event.target.value)){
                 return oldArray.filter( word => word !== event.target.value)

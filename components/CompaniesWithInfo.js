@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { shuffleArray } from '../pages/foretag';
 const content = require("../public/content/company_information.json")
 import CompanyModal from './CompanyModal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faX } from '@fortawesome/free-solid-svg-icons'
 
 export function CompanyInformationCard({company, showText=true, clickable=true}){
 
     const [isOpen, setOpen] = useState(false);
-    console.log(company.logo, company.company);
     const handleOpenModal = () =>{
         if(clickable){
             setOpen(true)
@@ -19,7 +21,7 @@ export function CompanyInformationCard({company, showText=true, clickable=true})
             isOpen && 
             <CompanyModal closeFunction={() => setOpen(false)} company={company}/>
         }
-        <div onClick={handleOpenModal} className='company-information-card'>
+        <div onClick={handleOpenModal} className={'company-information-card'}>
             <div className={'company-information-card--right background-image-' + company.partner}>
                 <img src={"images/companies/all/" + company.logo}/>
             </div>
@@ -38,6 +40,13 @@ export function CompanyInformationCard({company, showText=true, clickable=true})
                 }
                 </div>
             </div>
+            {!clickable &&
+            <div className='close-button-modal'>
+                <div onClick={() => setOpen(false)} className='close-button-modal-x'>
+                    <FontAwesomeIcon icon={faX}/>
+                </div>
+            </div>
+    }
            
         </div>
         </>

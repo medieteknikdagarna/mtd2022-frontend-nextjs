@@ -37,7 +37,30 @@
     cursor: pointer;
 }
     
+.close-button-modal{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%,-50%);
+    cursor: pointer;
 
+    &-x{
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        svg{
+            pointer-events: none;
+        }
+        path{
+            fill: white;
+        }
+
+    }
+}
 
 .job-advert{
 
@@ -182,10 +205,10 @@
 }
 
 .job-advert-modal{
-
+    position: relative;
     @media screen and (max-width: 60rem) {
-        max-width: 100%;
-        min-width: 100%;
+        max-width: 90%;
+        min-width: 90%;
     }
     z-index: 999;
     transition: all 0.2s;

@@ -2,7 +2,7 @@ import React, { useEffect,useState } from 'react';
 import Backdrop from './Backdrop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {} from "@fortawesome/fontawesome-svg-core"
-import { faArrowAltCircleUp, faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faArrowAltCircleUp, faEnvelope, faGlobe, faX } from '@fortawesome/free-solid-svg-icons'
 import {fa} from "@fortawesome/fontawesome-svg-core"
 import Button from './Button';
 
@@ -99,7 +99,7 @@ export default function JobAdvert({data}) {
             {data.email != "" &&
                 <div>
                 <FontAwesomeIcon icon={faEnvelope} />
-                <a href={"mailto:" + data.email}>{data.email}</a>
+                <a href={"mailto:" + data.email}>Email</a>
                 </div>
             }
         </div>
@@ -109,7 +109,11 @@ export default function JobAdvert({data}) {
             return <JobTag key={tag + i} text={tag}/>
    })}
    </div>
-   <Button onClick={() => setOpenModal(false)}>Close</Button>
+   <div className='close-button-modal'>
+        <div onClick={() => setOpenModal(false)} className='close-button-modal-x'>
+            <FontAwesomeIcon icon={faX}/>
+        </div>
+   </div>
  </div>
  </div>
         </Backdrop>
