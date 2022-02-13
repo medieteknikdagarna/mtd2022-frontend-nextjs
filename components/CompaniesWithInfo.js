@@ -9,11 +9,43 @@ import { faX } from '@fortawesome/free-solid-svg-icons'
 export function CompanyInformationCard({company, showText=true, clickable=true}){
     const [lang, setLang] = useContext(languageContext)
     const [isOpen, setOpen] = useState(false);
+    const [info, setInfo] = useState([])
     const handleOpenModal = () =>{
         if(clickable){
             setOpen(true)
         } 
     }
+
+    useEffect(()=>{
+        const MAX_CHAR_LENGTH = 360;
+        let newInfo = [];
+        let sum = 0
+        if(clickable && company.partner == "gold"){
+
+        
+        for(let i = 0; i < company.information.length; i++){
+            if( sum > MAX_CHAR_LENGTH){
+                break;
+            }
+            if (company.information[i].length + sum > MAX_CHAR_LENGTH){
+                let st = company.information[i].slice(0,MAX_CHAR_LENGTH-sum-1) + " ..."
+                newInfo.push(st)
+                break;
+            }
+            else{
+                newInfo.push(company.information[i])
+                sum += company.information[i].length
+            }
+        }
+        }
+        else{
+            newInfo = company.information;
+        }
+    
+        setInfo(newInfo)
+       
+    
+      },[company])
 
     return(
         <>
@@ -29,15 +61,17 @@ export function CompanyInformationCard({company, showText=true, clickable=true})
                 <h5>{company.company.toUpperCase()}</h5>
                 <span className={"company-information-card--"+company.partner}>{company.partner.toUpperCase()}</span>
                 <div className='company-information-card--information'>
-                {showText &&
-                    company.information.map((line,i) =>{
+                {showText && info &&
+                    info.map((line,i) =>{
                         return <p key={i.toString()}>{line}</p>
                     })
                 }
 
-                {!showText &&
-                    <span>{lang == "sv" ? "Läs mer" : "Read more"}</span>
+                {clickable &&
+                
+                <span className='read-more-company'>{lang == "sv" ? "Läs mer" : "Read more"}</span>
                 }
+                
                 </div>
             </div>
             {!clickable &&
