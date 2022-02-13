@@ -67,6 +67,7 @@ export function CompanyInformationCard({company, showText=true, clickable=true})
                     })
                 }
 
+
                 {clickable &&
                 
                 <span className='read-more-company'>{lang == "sv" ? "Läs mer" : "Read more"}</span>
