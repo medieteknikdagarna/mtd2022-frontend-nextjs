@@ -190,6 +190,15 @@
       "email": "",
       "tags": [],
       "logo_url": "hiq.svg"
+    },
+    {
+      "company": "Sectra AB",
+      "type": "job",
+      "information": ["Tar du examen 2022 och vill testa att leva och jobba utomlands? Kanske blev det inte som du tänkt dig med utlandsterminen? Kanske är internationella karriärmöjligheter högt upp på din lista när du väljer arbetsgivare. Vi är väldigt stolta över möjligheten att kunna erbjuda våra medarbetare den unika förmånen att bo och jobba utomlands. Vi ger dig nu chansen att efter inledande utbildning i Sverige och Europa, påbörja din karriär med en tjänst på vår USA-kontor i Shelton, Connecticut!"],
+      "website": ["https://career.sectra.com/job-opportunities/folj-med-sectra-till-usa/"],
+      "email": "",
+      "tags": ["engineering", "medical imaging", "USA"],
+      "logo_url": "sectra.svg"
     }
       ]
      

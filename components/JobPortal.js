@@ -71,7 +71,7 @@ export default function JobPortal() {
         
     <ResponsiveContainer className="jobportal">
             <div className='searchfield-jobportal'>
-                <input className='search-field-input' ref={searchRef} onChange={(e) => setSearchString(e.target.value)} placeholder='Sök efter nyckelord eller företag'/>
+                <input className='search-field-input' ref={searchRef} onChange={(e) => setSearchString(e.target.value)} placeholder={ lang == "sv" ? 'Sök efter nyckelord eller företag' : "Search by keyword och company"}/>
                 <div className='jobportal-checkboxes'>
                     <form>
                     <label>{lang == "sv" ? "Visa alla" : "Show all"}</label>
