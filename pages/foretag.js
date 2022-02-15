@@ -109,11 +109,11 @@ export default function Companies() {
 
     return (
         <div>
-        <NextSeo title="Företag"
+        <NextSeo  title="Företag"
         description="Här listar vi ett knippe av alla företag som har varit med oss genom åren. Vi hoppas att kunna ha med ert företag nästa år!"
         canonical="https://www.medieteknikdagen.se/foretag"
         />
-        <Header changeOnScroll/>
+        <Header style={{backgroundColor: "black"}} lightContrast changeOnScroll/>
         <ResponsiveContainer className="foretag--companies">
                <InfoSection tag="" title={content[lang].title} body={content[lang].body}/>
                <CompaniesWithInfoGold/>

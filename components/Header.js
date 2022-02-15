@@ -61,7 +61,7 @@ export default function Header({shadow =false, changeOnScroll = false, lightCont
            
         </div> 
         <div className='header--sponsors'>
-        {lastscrollPos >= 50 && changeOnScroll &&
+        { lightContrast &&
             <>
             <img src={"images/companies/all/sectra_vit.svg"}/>
             <img src={"images/companies/all/recordedfuture_vit.svg"}/>
