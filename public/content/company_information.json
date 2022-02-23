@@ -60,7 +60,8 @@
         {
             "company": "Bontouch",
             "partner": "bronze",
-            "information": ["Bontouch är en prisbelönt innovationsbyrå som bygger unika digitala kundupplevelser för partners såsom Post-it®, H&M, PostNord och SJ. Över 200 designers och ingenjörer servar kunder i Nordamerika, Europa och Asien från fem studios i Sverige, New York och London. De produkter som Bontouch bygger används idag av över 50 miljoner människor i 196 länder."],
+            "information": ["We are a diverse team of two hundred designers, engineers and entrepreneurs spread across our five studios in Sweden, London, and New York. The products we help create are used by more than 50 million people in 196 countries.","At Bontouch, we work based on one simple, but ambitious principle: Making the world’s greatest apps for the best brands on the planet."
+            ,"In order to have the greatest impact on users all over the world, we partner up with our favorite companies to create highly useful, beautiful-looking, visionary mobile and web apps that make life easier for millions of users in the real world. We work with partners such as Swish, PostNord, SJ, SEB, among many others.We offer our partners a unique long-term engagement model where we provide all the skills required for modern digital product development including strategy, design, development, testing, and maintenance.","We make exceptional products for everyday life."],
             "logo": "bontouch.svg"
         },
         {
@@ -68,6 +69,12 @@
             "partner": "bronze",
             "information": ["About Combitech:","Combitech is a Nordic solution and consulting partner with services in areas such as digital transformation, cyber security and total defense. We are 2100 employees, helping companies, industry and the public sector to benefit from technology, digitalization and innovation for a sustainable and secure society. Technology with a purpose, quite simply! Read more at www.combitech.se", "Combitech is an independent company within the defense and security group Saab.","Join Combitech:","Our goal is to provide opportunities for our coworker to become the best version of themselves by providing education and career opportunities.","We believe that an individual does a better job when they are able to focus on the right things, which is why we ensure that you have the right conditions for balancing work and everyday life.","Collaboration, passion and respect are important to us – and these come naturally when the right conditions are in place."],
             "logo": "combitech.svg"
+        },
+        {
+            "company": "BitSim",
+            "partner": "bronze",
+            "information": [""],
+            "logo": "bitsim.svg"
         },
         {
             "company": "HiQ",
