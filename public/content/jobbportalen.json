@@ -199,6 +199,33 @@
       "email": "",
       "tags": ["engineering", "medical imaging", "USA"],
       "logo_url": "sectra.svg"
+    },
+    {
+      "company": "Bontouch",
+      "type": "master",
+      "information": ["We don't have any master thesis positions available at the moment. We take in thesis students during the spring and open up our processes during September. If the students are interested in applying for master thesis they can email us at jobs@bontouch.com","We have master thesis positions within app and web development."],
+      "website": [],
+      "email": "jobs@bontouch.com",
+      "tags": ["React", "Vue", "Java", "Objective-C", "Swift", "Kotlin", "Android development", "iOS development", "Web development", "frontend development"],
+      "logo_url": "bontouch.svg"
+    },
+    {
+      "company": "Bontouch",
+      "type": "trainee",
+      "information": ["We don't have any Trainee positions. Students can contact us at jobs@bontouch.com if they are interested and we can see if we can find an interesting opening. "],
+      "website": [],
+      "email": "jobs@bontouch.com",
+      "tags": ["react", "vue", "javascript", "android", "iOS", "swift", "kotlin", "java", "objective-C", "frontend" ],
+      "logo_url": "bontouch.svg"
+    },
+    {
+      "company": "Bontouch",
+      "type": "job",
+      "information": ["We have a lot of positions within web development, android development, iOS development, design, QA, project management and analytics.","Current positions available on Graduateland is: Junior Web Developer, Android Developer and iOS Developer."],
+      "website": ["https://careers.bontouch.com/"],
+      "email": "jobs@bontouch.com",
+      "tags": ["iOS", "Android", "Web", "React", "Vue", "Javascript", "Kotlin", "Java", "Swift"," Objective-C", "frontend"],
+      "logo_url": "bontouch.svg"
     }
       ]
      
